@@ -1,3 +1,8 @@
 var root = document.getElementById("main")
 
-//m.render(root, response.status)
+let response
+FB.getLoginStatus(function(response) {
+  response = response
+});
+
+m.render(root, response.status)
