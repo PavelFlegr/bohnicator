@@ -1,6 +1,7 @@
 <body>
   <script src="https://unpkg.com/mithril/mithril.js"></script>
   <script>
+    let response
     window.fbAsyncInit = function() {
       FB.init({
         appId      : '163875155836204',
@@ -10,6 +11,10 @@
       });
           
       FB.AppEvents.logPageView();
+
+      FB.getLoginStatus(function(response) {
+        response = response
+      });
     };
 
     (function(d, s, id){
@@ -20,7 +25,7 @@
     fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
   </script>
-  <script src="app.js"></script>
+  <script defer src="app.js"></script>
   
   <main id="main"></main>
 </body>
