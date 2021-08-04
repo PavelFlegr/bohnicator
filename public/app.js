@@ -2,7 +2,7 @@ var root = document.getElementById("main")
 
 var App = {
   view: function() {
-      return m("main", "test")
+      return m("main", userId)
   }
 }
 
