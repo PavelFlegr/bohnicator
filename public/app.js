@@ -1,3 +1,11 @@
 var root = document.getElementById("main")
 
-m.render(root, "hello")
+var App = {
+  view: function() {
+      return userId
+  }
+}
+
+let start = () => {
+  m.mount(root, App)
+}

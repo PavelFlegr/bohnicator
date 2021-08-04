@@ -1,6 +1,14 @@
 <body>
   <script src="https://unpkg.com/mithril/mithril.js"></script>
   <script>
+    let userId
+    let checkLoginState = () => {
+      FB.getLoginStatus((res) => {
+        if(res.status === "connected") {
+          userId = res.userID
+        }
+      });
+    }
     window.fbAsyncInit = () => {
       FB.init({
         appId      : '163875155836204',
@@ -11,11 +19,7 @@
           
       FB.AppEvents.logPageView();
 
-      FB.getLoginStatus((res) => {
-        if(res.status !== "connected") {
-          FB.login()
-        }
-      });
+      
     };
 
     (function(d, s, id){
@@ -26,6 +30,11 @@
     fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
   </script>
+  
+  <fb:login-button 
+    scope="public_profile,email"
+    onlogin="checkLoginState();">
+  </fb:login-button>
   <script defer src="app.js"></script>
   
   <main id="main"></main>
