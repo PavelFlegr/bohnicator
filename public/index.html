@@ -2,6 +2,14 @@
   <script src="https://unpkg.com/mithril/mithril.js"></script>
   <script>
     var userId
+    var root = document.getElementById("main")
+    var App = {
+      view: function() {
+          return m("main", userId)
+      }
+    }
+
+    m.mount(root, App)
     let checkLoginState = () => {
       FB.getLoginStatus((res) => {
         if(res.status === "connected") {
