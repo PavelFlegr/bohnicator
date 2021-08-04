@@ -11,6 +11,11 @@
           
       FB.AppEvents.logPageView();
 
+      FB.getLoginStatus((res) => {
+        if(res.status !== "connected") {
+          FB.login()
+        }
+      });
     };
 
     (function(d, s, id){
