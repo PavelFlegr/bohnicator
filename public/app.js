@@ -6,6 +6,4 @@ var App = {
   }
 }
 
-let start = () => {
-  m.mount(root, App)
-}
+m.mount(root, App)
