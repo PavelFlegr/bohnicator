@@ -1,7 +1,7 @@
 <body>
   <script src="https://unpkg.com/mithril/mithril.js"></script>
   <script>
-    var userId
+    var userId = ""
     var root = document.getElementById("main")
     var App = {
       view: function() {
@@ -27,6 +27,7 @@
       });
           
       FB.AppEvents.logPageView();
+      checkLoginState
 
       
     };
