@@ -5,7 +5,7 @@
     let checkLoginState = () => {
       FB.getLoginStatus((res) => {
         if(res.status === "connected") {
-          userId = res.userID
+          userId = res.authResponse.userID
         }
       });
     }
