@@ -1,0 +1,23 @@
+{
+  "name": "bohnicator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PavelFlegr/bohnicator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PavelFlegr/bohnicator/issues"
+  },
+  "homepage": "https://github.com/PavelFlegr/bohnicator#readme",
+  "dependencies": {
+    "koa": "^2.13.1",
+    "koa-static": "^5.0.0"
+  }
+}
