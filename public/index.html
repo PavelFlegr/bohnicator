@@ -9,7 +9,10 @@
             version    : 'v11.0'
         });
             
-        FB.AppEvents.logPageView();   
+        FB.AppEvents.logPageView();
+        FB.getLoginStatus(function(response) {
+            response = response
+        });
             
         };
     
