@@ -17,7 +17,7 @@
       FB.getLoginStatus((res) => {
         if(res.status === "connected") {
           userId = res.authResponse.userID
-          console.log(res.authResponse)
+          m.redraw()
         }
       });
     }
